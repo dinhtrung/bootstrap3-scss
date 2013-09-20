@@ -1,0 +1,8 @@
+
+@font-face {
+	font-family: 'VNF-CaviarDreams';
+	src: url('fonts/VNF-Cariar_Dreams_Regular.eot?') format('eot'), 
+	     url('fonts/VNF-Cariar_Dreams_Regular.woff') format('woff'), 
+	     url('fonts/VNF-Cariar_Dreams_Regular.ttf')  format('truetype'),
+	     url('fonts/VNF-Cariar_Dreams_Regular.svg#fonts/VNF-Cariar_Dreams_Regular') format('svg');
+}
