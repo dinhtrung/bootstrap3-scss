@@ -1,6 +1,11 @@
 //
 // Pager pagination
 // --------------------------------------------------
+// Pager
+// -------------------------
+
+$pager-border-radius:                  15px !default;
+$pager-disabled-color:                 $gray-light !default;
 
 
 .pager {

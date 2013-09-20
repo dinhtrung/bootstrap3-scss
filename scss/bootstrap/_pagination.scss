@@ -1,6 +1,44 @@
 //
 // Pagination (multiple pages)
 // --------------------------------------------------
+
+// Pagination variables
+// -------------------------
+
+$pagination-bg:                        #fff !default;
+$pagination-border:                    #ddd !default;
+
+$pagination-hover-bg:                  $gray-lighter !default;
+
+$pagination-active-bg:                 $brand-primary !default;
+$pagination-active-color:              #fff !default;
+
+$pagination-disabled-color:            $gray-light !default;
+// Pagination mixins
+// -------------------------
+@mixin pagination-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
+  > li {
+    > a,
+    > span {
+      padding: $padding-vertical $padding-horizontal;
+      font-size: $font-size;
+    }
+    &:first-child {
+      > a,
+      > span {
+        @include border-left-radius($border-radius);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        @include border-right-radius($border-radius);
+      }
+    }
+  }
+}
+
+
 .pagination {
   display: inline-block;
   padding-left: 0;

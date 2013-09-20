@@ -1,24 +1,6 @@
 //
 // Scaffolding
 
-// --------------------------------------------------
-// Box sizing
-@mixin box-sizing($boxmodel) {
-  -webkit-box-sizing: $boxmodel;
-     -moz-box-sizing: $boxmodel;
-          box-sizing: $boxmodel;
-}
-
-
-// Reset the box-sizing
-
-*,
-*:before,
-*:after {
-  @include box-sizing(border-box);
-}
-
-
 // Body reset
 
 html {

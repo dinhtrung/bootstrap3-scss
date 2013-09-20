@@ -1,8 +1,47 @@
 //
 // Tables
 // --------------------------------------------------
+// Tables variables
+// -------------------------
 
+$table-cell-padding:                 8px !default;
+$table-condensed-cell-padding:       5px !default;
 
+$table-bg:                           transparent !default; // overall background-color
+$table-bg-accent:                    #f9f9f9 !default; // for striping
+$table-bg-hover:                     #f5f5f5 !default;
+$table-bg-active:                    $table-bg-hover !default;
+
+$table-border-color:                 #ddd !default; // table and cell border
+
+// Tables mixins
+// -------------------------
+@mixin table-row-variant($state, $background, $border) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table > thead > tr,
+  .table > tbody > tr,
+  .table > tfoot > tr {
+    > td.#{$state},
+    > th.#{$state},
+    &.#{$state} > td,
+    &.#{$state} > th {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+
+  // Hover states for `.table-hover`
+  // Note: this is not available for cells or rows within `thead` or `tfoot`.
+  .table-hover > tbody > tr {
+    > td.#{$state}:hover,
+    > th.#{$state}:hover,
+    &.#{$state}:hover > td {
+      background-color: darken($background, 5%);
+      border-color: darken($border, 5%);
+    }
+  }
+}
 table {
   max-width: 100%;
   background-color: $table-bg;

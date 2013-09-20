@@ -2,7 +2,25 @@
 // Progress bars
 // --------------------------------------------------
 
+// Progress bars variables
+// -------------------------
+$progress-bg:                 #f5f5f5 !default;
+$progress-bar-color:          #fff !default;
 
+$progress-bar-bg:             $brand-primary !default;
+$progress-bar-success-bg:     $brand-success !default;
+$progress-bar-warning-bg:     $brand-warning !default;
+$progress-bar-danger-bg:      $brand-danger !default;
+$progress-bar-info-bg:        $brand-info !default;
+
+// Progress bars mixins
+// -------------------------
+@mixin progress-bar-variant($color) {
+  background-color: $color;
+  .progress-striped & {
+    @include gradient-striped($color);
+  }
+}
 // Bar animations
 // -------------------------
 

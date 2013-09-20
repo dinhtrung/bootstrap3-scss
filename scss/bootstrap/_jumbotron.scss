@@ -1,7 +1,14 @@
 //
 // Jumbotron
 // --------------------------------------------------
+// Jumbotron
+// -------------------------
 
+$jumbotron-padding:              30px !default;
+$jumbotron-color:                inherit !default;
+$jumbotron-bg:                   $gray-lighter !default;
+
+$jumbotron-heading-color:        inherit !default;
 
 .jumbotron {
   padding: $jumbotron-padding;

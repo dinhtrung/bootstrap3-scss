@@ -1,7 +1,18 @@
 //
 // Badges
 // --------------------------------------------------
+// Badges
+// -------------------------
+$badge-color:                 #fff !default;
+$badge-link-hover-color:      #fff !default;
+$badge-bg:                    $gray-light !default;
 
+$badge-active-color:          $link-color !default;
+$badge-active-bg:             #fff !default;
+
+$badge-font-weight:           bold !default;
+$badge-line-height:           1 !default;
+$badge-border-radius:         10px !default;
 
 // Base classes
 .badge {
